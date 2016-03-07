@@ -1,4 +1,5 @@
 __author__ = 'thais'
+#Pollard p-1 algorithm
 def pollard(n, B):
     a = 2
     for j in range(2, B+1):
@@ -18,7 +19,8 @@ def gcd(a, b):
     if a % b == 0:
         return b
     return gcd(b, a % b)
-
+    
+#Pollard rho algorithm
 def rho(n):
     x = 2
     y = 2
@@ -39,9 +41,11 @@ def rho(n):
 def f(x):
     return ((x**2)+1) % n
 
+#Tests for Pollard p-1
 #B = 15
 #n = 9478477
 #print(pollard(n, B))
 
+#Tests for Pollard rho
 n = 170508763
 print rho(n)
